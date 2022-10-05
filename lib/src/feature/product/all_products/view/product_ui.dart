@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 
-import '../controller/product_controller.dart';
-import '../model/product_model.dart';
+import 'package:flutter_fake_api/src/feature/product/all_products/controller/product_controller.dart';
+import 'package:flutter_fake_api/src/feature/product/all_products/model/product_model.dart';
 
 class FakeStoreProductUi extends StatefulWidget {
   const FakeStoreProductUi({super.key});
@@ -19,7 +17,6 @@ class _FakeStoreProductUiState extends State<FakeStoreProductUi> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     fututeData = fspc.fetchData();
   }
@@ -61,7 +58,7 @@ class _FakeStoreProductUiState extends State<FakeStoreProductUi> {
               } else if (snapshot.hasError) {
                 return Text("${snapshot.error}");
               }
-              return Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator());
             },
           ),
         ],

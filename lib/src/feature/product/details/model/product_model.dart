@@ -1,4 +1,14 @@
-class FakeStoreSingleProductModel {
+class ProductModel {
+  ProductModel({
+    this.id,
+    this.title,
+    this.price,
+    this.description,
+    this.category,
+    this.image,
+    this.rating,
+  });
+
   int? id;
   String? title;
   num? price;
@@ -7,16 +17,7 @@ class FakeStoreSingleProductModel {
   String? image;
   Rating? rating;
 
-  FakeStoreSingleProductModel(
-      {this.id,
-      this.title,
-      this.price,
-      this.description,
-      this.category,
-      this.image,
-      this.rating});
-
-  FakeStoreSingleProductModel.fromJson(Map<String, dynamic> json) {
+  ProductModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     title = json['title'];
     price = json['price'];

@@ -10,7 +10,6 @@ class FakeStoreProductController extends GetxController {
 
     if (response.statusCode == 200) {
       List jsonResponse = jsonDecode(response.body);
-      print(jsonResponse);
       return jsonResponse
           .map((e) => FakeStoreProductModel.fromJson(e))
           .toList();
