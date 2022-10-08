@@ -44,15 +44,21 @@ class _FakeStoreProductUiState extends State<FakeStoreProductUi> {
                               radius: 30,
                               child:
                                   Image.network(data[index].image.toString())),
-                          title: Text(data[index].title.toString()),
+                          title: Text(
+                              "Product Name - ${data[index].title.toString()}"),
                           subtitle: Column(
                             children: [
-                              Text(data[index].id.toString()),
-                              Text(data[index].price.toString()),
-                              Text(data[index].description.toString()),
-                              Text(data[index].category.toString()),
-                              Text(data[index].rating!.rate.toString()),
-                              Text(data[index].rating!.count.toString()),
+                              Text("Product ID - ${data[index].id.toString()}"),
+                              Text(
+                                  "Product Price - ${data[index].price.toString()}"),
+                              Text(
+                                  "Product Disc -  ${data[index].description.toString()}"),
+                              Text(
+                                  "Product Categories - ${data[index].category.toString()}"),
+                              Text(
+                                  "Product Rate - ${data[index].rating!.rate.toString()}"),
+                              Text(
+                                  "Product rate count - ${data[index].rating!.count.toString()}"),
                             ],
                           ));
                     }),
